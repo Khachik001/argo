@@ -4,8 +4,7 @@ metadata:
   name: intern
   namespace: argocd
   annotations:
-    argocd-image-updater.argoproj.io/image-list: myimage=548844171305.dkr.ecr.us-east-1.amazonaws.com/private-example
-    argocd-image-updater.argoproj.io/myimage.update-strategy: latest
+    argocd-image-updater.argoproj.io/image-list: 548844171305.dkr.ecr.us-east-1.amazonaws.com/private-example:~v0.4
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
