@@ -21,8 +21,20 @@ spec:
     repoURL: git@github.com:Khachik001/helm.git
     targetRevision: HEAD
     helm:
-      valueFiles:
-        - values.yaml
+      parameters:
+        - name: "ports.container_port"
+          value: "3000"
+        - name: "ports.lb_port"
+          value: "80"
+        - name: "host"
+          value: "kub.am"  
+        - name: "replicaCount"
+          value: "3"
+        - name: "containers.image"
+          value: 548844171305.dkr.ecr.us-east-1.amazonaws.com/private-example
+        - name: "containers.tag"
+          value: v0.4.0
+      
   project: default
   syncPolicy:
     automated:
