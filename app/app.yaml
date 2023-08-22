@@ -16,7 +16,7 @@ spec:
     server: 'https://kubernetes.default.svc'
   source:
     path: Chart-test/
-    repoURL: ssh://git@github.com:Khachik001/helm.git
+    repoURL: git@github.com:Khachik001/helm.git
     targetRevision: HEAD
     helm:
       valueFiles:
