@@ -4,12 +4,9 @@ metadata:
   name: intern
   namespace: argocd
   annotations:
-    argocd-image-updater.argoproj.io/image-list: myimage=some/548844171305.dkr.ecr.us-east-1.amazonaws.com/private-example
-    argocd-image-updater.argoproj.io/myimage.update-strategy: latest
-    argocd-image-updater.argoproj.io/myimage.allow-tags: any
+    argocd-image-updater.argoproj.io/image-list: 548844171305.dkr.ecr.us-east-1.amazonaws.com/private-example:~
     argocd-image-updater.argoproj.io/myimage.helm.image-name: containers.image
     argocd-image-updater.argoproj.io/myimage.helm.image-tag: containers.tag
-    #argocd-image-updater.argoproj.io/myimage.update-strategy: latest
     argocd-image-updater.argoproj.io/write-back-method: git
     argocd-image-updater.argoproj.io/git-branch: main
   finalizers:
