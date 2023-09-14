@@ -33,7 +33,7 @@ spec:
         - name: "containers.image"
           value: 548844171305.dkr.ecr.us-east-1.amazonaws.com/private-ecr
         - name: "containers.tag"
-          value: v0.4.5
+          value: v0.4.1
       
   project: default
   syncPolicy:
