@@ -27,7 +27,7 @@ spec:
         - name: "ports.lb_port"
           value: "80"
         - name: "host"
-          value: "kub.am"  
+          value: "dev-kub.am"  
         - name: "replicaCount"
           value: "3"
         - name: "containers.image"
