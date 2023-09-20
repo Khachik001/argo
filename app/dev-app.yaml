@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: intern
+  name: intern-dev
   namespace: argocd
   annotations:
     argocd-image-updater.argoproj.io/image-list: myimage=548844171305.dkr.ecr.us-east-1.amazonaws.com/private-ecr-dev:~v0.4
