@@ -10,7 +10,7 @@ spec:
     namespace: default
     server: 'https://kubernetes.default.svc'
   source:
-    path: /
+    path: chart
     repoURL: https://github.com/Khachik001/external_helm
     targetRevision: main
   project: default
