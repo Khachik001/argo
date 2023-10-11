@@ -12,7 +12,7 @@ spec:
   source:
     path: /
     repoURL: https://github.com/Khachik001/external_helm
-    targetRevision: HEAD
+    targetRevision: main
   project: default
   syncPolicy:
     automated:
