@@ -11,7 +11,7 @@ spec:
     server: 'https://kubernetes.default.svc'
   source:
     path: /
-    repoURL: https://charts.external-secrets.io
+    repoURL: https://github.com/external-secrets/external-secrets.git
     targetRevision: HEAD
   project: default
   syncPolicy:
