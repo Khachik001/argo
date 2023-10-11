@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: test-install-external-secrets
-  namespace: argocd
+  namespace: external-secrets
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
