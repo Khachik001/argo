@@ -10,8 +10,8 @@ spec:
     namespace: external-secrets
     server: 'https://kubernetes.default.svc'
   sources:
-  - chart: external-secrets
-    repoURL: 'https://charts.external-secrets.io/'
+  - repoURL: 'https://charts.external-secrets.io/'
+    chart: external-secrets
     targetRevision: 0.9.5
     helm:
     valueFiles:
