@@ -15,13 +15,12 @@ spec:
     targetRevision: 0.9.5
     helm:
     valueFiles:
-    - $values/chart/serviceaccount_values.yaml
+    - $values/serviceaccount_values.yaml
 
-  - repoURL: https://github.com/Khachik001/external_helm.git
+  - repoURL: https://github.com/Khachik001/chart_values.git
     targetRevision: HEAD
     ref: values
-
-
+    
   - path: chart
     repoURL: https://github.com/Khachik001/external_helm
     targetRevision: HEAD  
