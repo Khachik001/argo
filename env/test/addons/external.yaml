@@ -15,7 +15,7 @@ spec:
       targetRevision: 0.9.5
     - path: chart
       repoURL: https://github.com/Khachik001/external_helm
-      targetRevision: main  
+      targetRevision: HEAD  
   project: default
   syncPolicy:
     automated:
