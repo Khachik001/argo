@@ -11,18 +11,18 @@ spec:
     server: 'https://kubernetes.default.svc'
   sources:
   - chart: external-secrets
-    repoURL:  https://charts.external-secrets.io/
+    repoURL: 'https://charts.external-secrets.io/'
     targetRevision: 0.9.5
     helm:
     valueFiles:
     - $values/serviceaccount_values.yaml
 
-  - repoURL: https://github.com/Khachik001/chart_values.git
+  - repoURL: 'https://github.com/Khachik001/chart_values.git'
     targetRevision: HEAD
     ref: values
     
   - path: chart
-    repoURL: https://github.com/Khachik001/external_helm
+    repoURL: 'https://github.com/Khachik001/external_helm'
     targetRevision: HEAD  
     
   project: default
