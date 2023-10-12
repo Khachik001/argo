@@ -4,7 +4,7 @@ metadata:
   name: application
   namespace: argocd
   annotations:
-    argocd-image-updater.argoproj.io/image-list: myimage=548844171305.dkr.ecr.us-east-1.amazonaws.com/private-ecr-stage:~v0.4
+    argocd-image-updater.argoproj.io/image-list: myimage=548844171305.dkr.ecr.us-east-1.amazonaws.com/private-ecr-test:~v0.4
     argocd-image-updater.argoproj.io/myimage.helm.image-name: containers.image
     argocd-image-updater.argoproj.io/myimage.helm.image-tag: containers.tag
     #argocd-image-updater.argoproj.io/myimage.update-strategy: latest
@@ -19,14 +19,7 @@ spec:
   source:
     path: chart/
     repoURL: https://github.com/Khachik001/db_helm
-    targetRevision: HEAD
-    helm:
-      parameters:
-        - name: "containers.image"
-          value: 548844171305.dkr.ecr.us-east-1.amazonaws.com/private-ecr-stage
-        - name: "containers.tag"
-          value: v0.4.2 
-      
+    targetRevision: HEAD   
   project: default
   syncPolicy:
     automated:
