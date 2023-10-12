@@ -20,7 +20,9 @@ spec:
     targetRevision: HEAD
     ref: values
     
-
+  - path: chart
+    repoURL: 'https://github.com/Khachik001/external_helm'
+    targetRevision: HEAD  
     
   project: default
   syncPolicy:
