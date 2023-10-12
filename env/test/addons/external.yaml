@@ -16,7 +16,7 @@ spec:
     helm:
       valueFiles:
       - $values/chart/values.yaml
-  - repoURL: 'https://github.com/Khachik001/chart_values'
+  - repoURL: 'https://github.com/Khachik001/chart_values.git'
     targetRevision: HEAD
     ref: values
     
