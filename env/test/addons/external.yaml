@@ -13,6 +13,12 @@ spec:
     - chart: external-secrets
       repoURL:  https://charts.external-secrets.io/
       targetRevision: 0.9.5
+      helm:
+      valueFiles:
+      - $values/chart/sa_values.yaml
+    - repoURL: https://github.com/Khachik001/external_helm
+      targetRevision: HEAD
+      ref: values
     - path: chart
       repoURL: https://github.com/Khachik001/external_helm
       targetRevision: HEAD  
