@@ -15,10 +15,10 @@ spec:
     targetRevision: 0.9.5
     helm:
       valueFiles:
-      - $values_test/charts/external_secrets/values.yaml 
+      - ${values}/charts/external_secrets/values.yaml 
   - repoURL: https://github.com/Khachik001/chart_values.git
     targetRevision: HEAD
-    ref: values_test
+    ref: values
  
   - path: chart
     repoURL: https://github.com/Khachik001/external_helm
