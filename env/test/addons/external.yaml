@@ -23,9 +23,6 @@ spec:
   - path: chart
     repoURL: https://github.com/Khachik001/external_helm
     targetRevision: HEAD
-status:
-      revisions:
-      - 98c17b1c41b6f60a38e54c8edefc11ea9d89b131
 
       
     
