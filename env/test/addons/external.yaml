@@ -3,25 +3,18 @@ kind: Application
 metadata:
   name: external-secrets
   namespace: argocd
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
     namespace: external-secrets
     server: https://kubernetes.default.svc
   sources:
-  - repoURL: https://github.com/Khachik001/chart_values.git
-    targetRevision: HEAD
-    ref: values
   - repoURL: https://charts.external-secrets.io/
     chart: external-secrets
     targetRevision: 0.9.5
-    helm:
-      valueFiles:
-      - $values/charts/external_secrets/values.yaml 
-  
-  
- 
+  - path: chart
+    repoURL: https://github.com/Khachik001/external_helm
+    targetRevision: HEAD
+
       
     
   project: default
