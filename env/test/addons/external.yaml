@@ -19,10 +19,16 @@ spec:
   - repoURL: https://github.com/Khachik001/chart_values.git
     targetRevision: HEAD
     ref: values
-    
+ 
   - path: chart
     repoURL: https://github.com/Khachik001/external_helm
-    targetRevision: HEAD  
+    targetRevision: HEAD
+
+status:
+      revisions:
+      - repoUrl: https://github.com/Khachik001/external_helm.git
+        revision: 98c17b1c41b6f60a38e54c8edefc11ea9d89b131
+      
     
   project: default
   syncPolicy:
