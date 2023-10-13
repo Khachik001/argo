@@ -19,9 +19,9 @@ spec:
   - repoURL: https://github.com/Khachik001/chart_values.git
     targetRevision: HEAD
     ref: values
-  revisions:
-  - 0.9.5
-  - 7de3d758764f02ae990446b9dd84ec375902880a
+revisions:
+ - 0.9.5
+ - 7de3d758764f02ae990446b9dd84ec375902880a
 
 
       
