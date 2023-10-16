@@ -9,8 +9,8 @@ spec:
   destination:
     namespace: default
     server: https://kubernetes.default.svc
-  source:
-    repoURL: https://kubernetes.github.io/autoscaler
+  sources:
+  - repoURL: https://kubernetes.github.io/autoscaler
     chart: cluster-autoscaler
     targetRevision: 9.29.3
     helm:
