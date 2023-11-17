@@ -1,0 +1,43 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: external-secrets
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: external-secrets
+    server: https://kubernetes.default.svc
+  sources:
+  - repoURL: https://charts.external-secrets.io/
+    chart: external-secrets
+    targetRevision: 0.9.5
+    helm:
+      values: |
+        serviceAccount:
+          annotations:
+            eks.amazonaws.com/role-arn: {{ .Values.serviceAccount.annotations.eks.amazonaws.com/role-arn }} 
+      valueFiles:
+      - $values/charts/external_secrets/values.yaml 
+  - repoURL: https://github.com/Khachik001/chart_values.git
+    targetRevision: HEAD
+    ref: values
+ 
+  - path: chart
+    repoURL: https://github.com/Khachik001/external_helm
+    targetRevision: HEAD
+
+      
+    
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+      allowEmpty: false
+    syncOptions:
+      - Validate=true
+      - CreateNamespace=true
+      - PrunePropagationPolicy=foreground
+      - PruneLast=true
