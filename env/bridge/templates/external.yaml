@@ -15,8 +15,8 @@ spec:
     targetRevision: 0.9.5
     helm:
       parameters:
-        - name: "serviceAccount.annotations:"
-          value: {{ .Values.serviceAccount.annotations }}
+        - name: "serviceAccount.annotations"
+          value: "test"
       valueFiles:
       - $values/charts/external_secrets/values.yaml 
   - repoURL: https://github.com/Khachik001/chart_values.git
