@@ -16,7 +16,7 @@ spec:
     helm:
       parameters:
         - name: "serviceAccount.annotations"
-          value: {{ .Values.serviceAccount.annotations }}
+          value: {{- toYaml .Values.serviceAccount.annotations | nindent 4 }}
       valueFiles:
       - $values/charts/external_secrets/values.yaml 
   - repoURL: https://github.com/Khachik001/chart_values.git
