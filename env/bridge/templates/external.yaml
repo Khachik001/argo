@@ -14,10 +14,6 @@ spec:
     chart: external-secrets
     targetRevision: 0.9.5
     helm:
-      values: |
-        serviceAccount:
-          annotations:
-            eks.amazonaws.com/role-arn: {{ .Values.serviceAccount.annotations.eks.amazonaws.com/role-arn }} 
       valueFiles:
       - $values/charts/external_secrets/values.yaml 
   - repoURL: https://github.com/Khachik001/chart_values.git
