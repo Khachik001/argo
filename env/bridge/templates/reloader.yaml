@@ -11,7 +11,7 @@ spec:
     server: https://kubernetes.default.svc
   source:
     repoURL: https://stakater.github.io/stakater-charts/
-    chart: reloader
+    chart: {{ .Values.chart_name }}
     targetRevision: 1.0.43
   project: default
   syncPolicy:
