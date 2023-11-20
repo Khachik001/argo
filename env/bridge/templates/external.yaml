@@ -14,7 +14,7 @@ spec:
     chart: external-secrets
     targetRevision: 0.9.5
     helm:
-      valuesObject:
+      values: |
         serviceAccount.annotations: {{ .Values.serviceAccount.annotations }}
       valueFiles:
       - $values/charts/external_secrets/values.yaml 
