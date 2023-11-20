@@ -1,5 +1,5 @@
 serviceAccount:
-  annotations: {}
-
+  annotations:
+    eks.amazonaws.com/role-arn: arn:aws:iam::548844171305:role/intern_eks-test-external-secrets-role
   name: test  
 chart_name: reloa
