@@ -18,8 +18,6 @@ spec:
         serviceAccount.annotations: 
           {{ toYaml .Values.serviceAccount.annotations | indent 4 }}
           name: external-secrets-sas 
-      valueFiles:
-      - $values/charts/external_secrets/values.yaml 
   - repoURL: https://github.com/Khachik001/chart_values.git
     targetRevision: HEAD
     ref: values
