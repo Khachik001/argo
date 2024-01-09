@@ -18,7 +18,7 @@ spec:
       values: |
         serviceAccount:
           annotations: 
-            {{ toYaml .Values.external.serviceAccount.annotations | indent 4 }}
+            {{ toYaml .Values.external.externalSecrets.serviceAccount.annotations | indent 4 }}
       valueFiles:
       - $values/charts/external_secrets/values.yaml 
   - repoURL: https://github.com/Khachik001/chart_values.git
