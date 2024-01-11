@@ -17,7 +17,12 @@ spec:
       values: |
         serviceAccount:
           annotations: 
-            {{ toYaml .Values.keda.serviceAccount.annotations | indent 4 }}    
+            {{ toYaml .Values.keda.serviceAccount.annotations | indent 4 }}
+        podSecurityContext:
+          operator:
+            fsGroup: 1001
+            runAsGroup: 1001
+            runAsUser: 1001    
   project: default
   syncPolicy:
     automated:
