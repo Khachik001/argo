@@ -15,7 +15,6 @@ spec:
     targetRevision: 2.12.1
     helm:
       values: |
-        podAnnotations.metricsAdapter.insecureSkipTLSVerify: true
         serviceAccount:
           annotations: 
             {{ toYaml .Values.keda.serviceAccount.annotations | indent 4 }}         
