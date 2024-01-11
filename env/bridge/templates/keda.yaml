@@ -11,7 +11,7 @@ spec:
     server: https://kubernetes.default.svc
   source:
     repoURL: https://kedacore.github.io/charts
-    chart: kedacore/keda
+    chart: keda
     targetRevision: 2.12.1
   project: default
   syncPolicy:
