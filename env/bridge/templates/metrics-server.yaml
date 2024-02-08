@@ -7,11 +7,11 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: default
+    namespace: metrics-server
     server: https://kubernetes.default.svc
   source:
     repoURL: https://kubernetes-sigs.github.io/metrics-server/
-    chart: {{ .Values.keda.name }}
+    chart: metrics-server
     targetRevision: 3.12.0
   project: default
   syncPolicy:
