@@ -1,1 +1,41 @@
-
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: intern-dev
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: default
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: Chart-test/
+    repoURL: https://github.com/Khachik001/helm
+    targetRevision: HEAD
+    helm:
+      parameters:
+        - name: "ports.container_port"
+          value: "80"
+        - name: "ports.lb_port"
+          value: "80"
+        - name: "host"
+          value: "dev-kub.am"  
+        - name: "replicaCount"
+          value: "3"
+        - name: "containers.image"
+          value: nginx
+        - name: "containers.tag"
+          value: latest      
+          
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+      allowEmpty: false
+    syncOptions:
+      - Validate=true
+      - CreateNamespace=true
+      - PrunePropagationPolicy=foreground
+      - PruneLast=true
