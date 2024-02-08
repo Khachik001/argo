@@ -1,4 +1,3 @@
 external:
   enabled: false
-keda:
-  name: "keda" 
+
