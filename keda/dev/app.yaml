@@ -14,15 +14,19 @@ spec:
     repoURL: https://github.com/Khachik001/helm
     targetRevision: HEAD
     helm:
-      values: |
-        ports.container_port: 80
-        ports.lb_port: 80
-        host: dev-kub.am
-        replicaCount: 3 
-        containers:
-          image: nginx
-          tag: latest
-            
+      parameters:
+        - name: "ports.container_port"
+          value: "80"
+        - name: "ports.lb_port"
+          value: "80"
+        - name: "host"
+          value: "dev-kub.am"  
+        - name: "replicaCount"
+          value: "3"
+        - name: "containers.image"
+          value: "nginx"
+        - name: "containers.tag"
+          value: "latest"
           
   project: default
   syncPolicy:
