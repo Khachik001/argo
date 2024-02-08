@@ -12,12 +12,12 @@ spec:
   source:
     repoURL: https://kedacore.github.io/charts
     chart: keda
-    targetRevision: 2.12.1
-    helm:
-      values: |
-        serviceAccount:
-          annotations: 
-            {{ toYaml .Values.keda.serviceAccount.annotations | indent 4 }}         
+    targetRevision: 2.13.1
+    # helm:
+    #   values: |
+    #     serviceAccount:
+    #       annotations: 
+    #         {{ toYaml .Values.keda.serviceAccount.annotations | indent 4 }}         
   project: default
   syncPolicy:
     automated:
