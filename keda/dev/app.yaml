@@ -24,9 +24,9 @@ spec:
         - name: "replicaCount"
           value: "3"
         - name: "containers.image"
-          value: nginx
+          value: "nginx"
         - name: "containers.tag"
-          value: latest      
+          value: "latest"      
           
   project: default
   syncPolicy:
