@@ -22,7 +22,7 @@ spec:
         - name: "host"
           value: "dev-kub.am"  
         - name: "replicaCount"
-          value: "3"
+          value: "1"
         - name: "containers.image"
           value: "nginx"
         - name: "containers.tag"
